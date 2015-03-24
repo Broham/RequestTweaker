@@ -10,15 +10,22 @@
       }
       #requests {
         /* avoid an excessively wide status text */
-        width:49%;
+        width:45%;
         float:left;
+        padding-right: 20px;
+      }
+      #requests div{
+        text-overflow:ellipsis;
+        overflow:hidden;
       }
       #details{
-        width:49%;
+        width:45%;
         float:right;
+        padding:10px;
       }
-      #details div{
+      #details > div{
         display:none;
+        color:#5F9F9F;
       }
       #filter{
         position:absolute;
@@ -27,6 +34,30 @@
       }
       .semi{
         color:#d3d3d3;
+      }
+      .edit{
+        display:none;
+        position:absolute;
+        top:25px;
+        height: 100%;
+        width:100%;
+        color:black;
+        background-color: #d3d3d3;
+        padding:20px;
+        border-radius: 5px;
+      }
+      #edit-panel{
+        color:black;
+      }
+      .name{
+        width:150px;
+        display: inline-block;
+      }
+      h4{
+        margin-bottom: 5px;
+      }
+      .data{
+        margin-left: 10px;
       }
     </style>
     <script src="/lib/jquery-2.1.3.min.js"></script>
@@ -39,6 +70,12 @@
       </div>
       <div id="details">
         <h4>Details:</h4>
+        <div class="edit">
+          <div id="edit-panel">
+            Edit panel...
+          </div>
+          <button id="send">Send</button> <button id="exit">Exit</button>
+        </div>
       </div>
   </body>
 </html>
