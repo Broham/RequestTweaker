@@ -2,80 +2,25 @@
 <html>
   <head>
     <title>Request Tweaker</title>
-    <style>
-      body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: .5em;
-        width:100%;
-      }
-      #requests {
-        /* avoid an excessively wide status text */
-        width:45%;
-        float:left;
-        padding-right: 20px;
-      }
-      #requests div{
-        text-overflow:ellipsis;
-        overflow:hidden;
-      }
-      #details{
-        width:45%;
-        float:right;
-        padding:10px;
-      }
-      #details > div{
-        display:none;
-        color:#5F9F9F;
-      }
-      #filter{
-        position:absolute;
-        top:5px;
-        right:5px;
-      }
-      .semi{
-        color:#d3d3d3;
-      }
-      .edit{
-        display:none;
-        position:absolute;
-        top:25px;
-        height: 100%;
-        width:100%;
-        color:black;
-        background-color: #d3d3d3;
-        padding:20px;
-        border-radius: 5px;
-      }
-      #edit-panel{
-        color:black;
-      }
-      .name{
-        width:150px;
-        display: inline-block;
-      }
-      h4{
-        margin-bottom: 5px;
-      }
-      .data{
-        margin-left: 10px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/lib/styles.css">
     <script src="/lib/jquery-2.1.3.min.js"></script>
     <script src="/panel/panel.js"></script>
   </head>
   <body>
       <div id="filter">Filter: <input type="text" /></div>
       <div id="requests">
-        <h4>Request:</h4>
       </div>
       <div id="details">
-        <h4>Details:</h4>
         <div class="edit">
           <div id="edit-panel">
-            Edit panel...
+
           </div>
-          <button id="send">Send</button> <button id="exit">Exit</button>
+          <div class="actions">
+            <img class='send' src='/lib/send.png' />
+            <img class='exit' src='/lib/close.png' />
+          </div>
         </div>
+        <h4>Details:</h4>
       </div>
   </body>
 </html>
